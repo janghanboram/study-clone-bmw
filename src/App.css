@@ -1,32 +1,155 @@
-.App {
-  text-align: center;
+/************************************************************************
+ reset 
+************************************************************************/
+p,h1,h2,h3,h4,h5{
+  color: #262626;
+}
+h1,h3{
+  margin: 0 0 10px 0;
+  padding: 0
+}
+a, a:hover, a:focus{
+  text-decoration: none;
+}
+/************************************************************************
+ menu 
+************************************************************************/
+.menu {
+  height: 56px;
+  background-color: #f8f8f8;
 }
 
-.App-logo {
-  animation: App-logo-spin infinite 20s linear;
-  height: 40vmin;
+.menu .container{
+  max-width: 1280px;
+  margin: 0 auto;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+.menu-link {
+  color: #262626;
+  line-height: 56px;
+  padding-right: 11px;
+}
+
+/************************************************************************
+common button style 
+************************************************************************/
+.btn {
+  font-weight:bold;
+  border: solid 4px;
+  line-height: 52px;
+  padding: 12px 40px;
+}
+.btn-white:hover{
+  background-color: white;
+  color: #4d4d4d
+}
+
+.btn-black:hover {
+  background-color: #4d4d4d;
+  color: white
+}
+.btn-white {
+  border-color: white;
   color: white;
 }
 
-.App-link {
-  color: #61dafb;
+.btn-black {
+  border-color: #4d4d4d;
+  color: #4d4d4d;
+}
+/************************************************************************
+ main grid 
+************************************************************************/
+.container .main {
+  display: flex;
+  flex-wrap: wrap;
+}
+.panel {
+  flex-grow:1;
+  height: 400px;
+  display: flex;
+  align-items: flex-end;
+  border: solid 1px white;
+  background-color: salmon;
+}
+.panel-wide {
+  width: 100%;
+}
+.panel .content{
+  margin: 0 0 45px 75px;
+}
+.btn-container{
+  margin-top: 25px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.link-container {
+  text-align: center;
+  padding: 45px 0;
+}
+
+.text-large{
+  line-height: 75px;
+  font-size: 75px;
+}
+
+.text-normal{
+  line-height: 45px;
+  font-size: 30px;
+}
+
+.font-weight-300{
+  font-weight: 300;
+}
+/************************************************************************
+ gallery grid 
+************************************************************************/
+.gallery{
+
+}
+.gallery-template{
+  display: flex;
+}
+.gallery-item-group{
+  width: 33.33%;
+  height: 200px;
+}
+.gallery-item-group .gallery-item{
+  width: 100%;
+}
+.gallery-item{
+  width: 33.33%;
+  height: 200px;
+  background-color: salmon;
+  border: solid 1px white;
+  display: flex;
+  align-items: flex-end;
+}
+.gallery-item .content{
+  margin: 0 0 15px 35px;
+  
+}
+.gallery-item-large{
+  width: 66.66%;
+  background-color: rebeccapurple;
+  height: 400px;
+}
+
+.gallery-item .title, .gallery-item .sub-title {
+  color: white;
+}
+
+.gallery-item .title{
+  font-weight: bold  
+}
+
+.template-middle .gallery-item{
+  flex-grow: 1;
+  
+}
+.gallery .btn-container{
+  text-align: center;
+  margin: 45px 0;
+}
+.btn-show-more{
+  padding: 12px 100px;
 }
