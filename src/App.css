@@ -1,16 +1,4 @@
-/************************************************************************
- reset 
-************************************************************************/
-p,h1,h2,h3,h4,h5{
-  color: #262626;
-}
-h1,h3{
-  margin: 0 0 10px 0;
-  padding: 0
-}
-a, a:hover, a:focus{
-  text-decoration: none;
-}
+
 /************************************************************************
  menu 
 ************************************************************************/
@@ -22,9 +10,10 @@ a, a:hover, a:focus{
 .menu .container{
   max-width: 1280px;
   margin: 0 auto;
+  display: flex;
 }
 
-.menu-link {
+.nav-item {
   color: #262626;
   line-height: 56px;
   padding-right: 11px;
@@ -66,7 +55,7 @@ common button style
 }
 .panel {
   flex-grow:1;
-  height: 400px;
+  /* height: 400px; */
   display: flex;
   align-items: flex-end;
   border: solid 1px white;
@@ -76,7 +65,8 @@ common button style
   width: 100%;
 }
 .panel .content{
-  margin: 0 0 45px 75px;
+  /* margin: 0 0 45px 75px; */
+  padding-top: 50%;
 }
 .btn-container{
   margin-top: 25px;

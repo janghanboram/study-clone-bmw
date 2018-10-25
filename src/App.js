@@ -1,35 +1,98 @@
 import React, { Component } from 'react';
+import './Reset.css';
 import './App.css';
+
+const DATA = {
+  navData: [
+    {
+      index: 0,
+      href: "#",
+      text: "Home"
+    },
+    {
+      index: 1,
+      href: "#",
+      text: "Automative Life"
+    },
+    {
+      index: 2,
+      href: "#",
+      text: "Design"
+    },
+    {
+      index: 3,
+      href: "#",
+      text: "Innovation"
+    },
+    {
+      index: 4,
+      href: "#",
+      text: "Performance"
+    },
+    {
+      index: 5,
+      href: "#",
+      text: "Models"
+    }
+  ],
+  panelData: [
+    {
+      index: 0,
+      source: "",
+      sourceType: "",
+      category: "Design",
+      title: "The secret of our favorite places",
+      href: "#",
+      isWide: true
+    },
+    {
+      index: 1,
+      source: "",
+      sourceType: "",
+      category: "Design",
+      title: "The secret of our favorite places",
+      href: "#",
+      isWide: false
+    },
+    {
+      index: 2,
+      source: "",
+      sourceType: "",
+      category: "Design",
+      title: "The secret of our favorite places",
+      href: "#",
+      isWide: false
+    }
+  ]
+};
 class App extends Component {
+
+  _renderNavList(){
+    return DATA.navData.map((data)=>{
+      return (
+        <li className="nav-item" key={data.index}><a href={data.href}>{data.text}</a></li>
+      )
+    });
+  }
+  // _renderPanelList(){
+  //   return DATA.panelData.map( (data) => {
+  //     let panelClassName = "panel"
+
+  //     return <li className="nav-item" key="{data.index}">
+  //         <a href="{data.href}">{data.text}</a>
+  //       </li>;
+  //   });
+  // }
+
   render() {
+    const navList = this._renderNavList();
+    // const panelList = this._renderPanelList();
+    
     return <div className="container">
         <header className="menu">
-          <div className="container">
-            <a href="/" className="menu-link">
-              {" "}
-              Home
-            </a>
-            <a href="/" className="menu-link">
-              {" "}
-              Automative Life
-            </a>
-            <a href="/" className="menu-link">
-              {" "}
-              Design
-            </a>
-            <a href="/" className="menu-link">
-              {" "}
-              Innovation
-            </a>
-            <a href="/" className="menu-link">
-              {" "}
-              Performance
-            </a>
-            <a href="/" className="menu-link">
-              {" "}
-              Models
-            </a>
-          </div>
+          <ul className="container">
+            {navList}
+          </ul>
         </header>
         <div className="main">
           <div className="panel panel-wide">
