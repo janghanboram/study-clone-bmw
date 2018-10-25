@@ -68,6 +68,40 @@ const DATA = {
       title: "How to become an ideas machine",
       href: "#",
       isWide: false
+    },
+  ],
+  galleryData: [{
+      index: 0,
+      source: {
+        src: "",
+        type: ""
+      },
+      category: "Design",
+      title: "The secret of our favorite places",
+      href: "#",
+      isWide: true
+    },
+    {
+      index: 1,
+      source: {
+        src: "",
+        type: ""
+      },
+      category: "Innovation",
+      title: "4 futuristic cities and buildings that actually exist",
+      href: "#",
+      isWide: false
+    },
+    {
+      index: 2,
+      source: {
+        src: "",
+        type: ""
+      },
+      category: "Advice",
+      title: "How to become an ideas machine",
+      href: "#",
+      isWide: false
     }
   ]
 };
@@ -106,17 +140,43 @@ class App extends Component {
     });
   }
 
+  _renderGalleryList(){
+    return DATA.galleryData.map( (data) => {
+      let panelClassName = "panel"
+      
+      if(data.isWide){
+        panelClassName = "panel panel-wide"
+      }
+
+      return <div className={panelClassName} key={data.index}>
+          <a href={data.href} className="panel-container">
+            <div className="panel-content">
+              <div className="title-container">
+                <h3 className="sub-title font-weight-300">{data.category}</h3>
+                <h1 className="title">{data.title}</h1>
+              </div>
+              <div className="btn-container">
+                <a href={data.href} className="btn btn-white">
+                  Read more
+                </a>
+              </div>
+            </div>
+          </a>
+        </div>;
+    });
+  }
+
   render() {
     const navList = this._renderNavList();
     const panelList = this._renderPanelList();
     
     return <div className="container">
         <header className="menu">
+          <span className="logo">BMW</span>
           <ul className="container">
             {navList}
           </ul>
         </header>
-        
         <div className="main">
           <div className="panel-group">
             {panelList}
