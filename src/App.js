@@ -128,33 +128,9 @@ class App extends Component {
                 <h3 className="sub-title font-weight-300">{data.category}</h3>
                 <h1 className="title">{data.title}</h1>
               <div className="btn-container">
-                <a href={data.href} className="btn btn-white">
+                <span href={data.href} className="btn btn-white">
                   Read more
-                </a>
-              </div>
-            </div>
-          </a>
-        </div>;
-    });
-  }
-
-  _renderGalleryList(){
-    return DATA.galleryData.map( (data) => {
-      let panelClassName = "panel"
-      
-      if(data.isWide){
-        panelClassName = "panel panel-wide"
-      }
-
-      return <div className={panelClassName} key={data.index}>
-          <a href={data.href} className="panel-container">
-            <div className="panel-content">
-              <h3 className="sub-title font-weight-300">{data.category}</h3>
-              <h1 className="title">{data.title}</h1>
-              <div className="btn-container">
-                <a href={data.href} className="btn btn-white">
-                  Read more
-                </a>
+                </span>
               </div>
             </div>
           </a>
