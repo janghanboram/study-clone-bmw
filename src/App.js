@@ -110,7 +110,7 @@ class App extends Component {
   _renderNavList(){
     return DATA.navData.map((data)=>{
       return (
-        <li className="nav-item" key={data.index}><a href={data.href}>{data.text}</a></li>
+        <li className="menu-item" key={data.index}><a href={data.href}>{data.text}</a></li>
       )
     });
   }
@@ -171,12 +171,20 @@ class App extends Component {
     const panelList = this._renderPanelList();
     
     return <div className="container">
+
         <header className="menu">
-          <span className="logo">BMW</span>
-          <ul className="container">
-            {navList}
-          </ul>
+          <nav className="container">
+            <div className="logo">
+              <a href="#">
+                <img className="logo-img" src = "https://www.bmw.com/etc/designs/bmwcom/base/img/logo-en.png"/>            
+              </a>
+            </div>
+            <ul className="menu-list">
+              {navList}
+            </ul>
+          </nav>
         </header>
+    
         <div className="main">
           <div className="panel-group">
             {panelList}
@@ -192,6 +200,7 @@ class App extends Component {
             <a href="/">> Find your BMW</a>
           </h3>
         </div>
+
         <div className="gallery">
           <div className="gallery-template template-top">
             <div className="gallery-item gallery-item-large">
@@ -283,7 +292,7 @@ class App extends Component {
             </a>
           </div>
         </div>
-      </div>;
+      </div>
   }
 }
 
