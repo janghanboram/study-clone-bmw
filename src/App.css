@@ -49,24 +49,32 @@ common button style
 /************************************************************************
  main grid 
 ************************************************************************/
-.container .main {
+.panel-group {
   display: flex;
   flex-wrap: wrap;
 }
 .panel {
-  flex-grow:1;
-  /* height: 400px; */
-  display: flex;
-  align-items: flex-end;
-  border: solid 1px white;
+  position: relative;
+  flex: 1;
   background-color: salmon;
+  margin: 3px;
+  /* padding-top을 %로 처리하면 브라우저를 resize할 때, height가 비용만큼 변함. */
+  padding-top: 40%;
 }
 .panel-wide {
-  width: 100%;
+  min-width: 100%;
 }
-.panel .content{
-  /* margin: 0 0 45px 75px; */
-  padding-top: 50%;
+.panel-container{
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;  
+}
+.panel-content{
+  position: absolute;
+  bottom: 0;
+  padding: 15px;
 }
 .btn-container{
   margin-top: 25px;

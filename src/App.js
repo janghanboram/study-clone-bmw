@@ -38,8 +38,10 @@ const DATA = {
   panelData: [
     {
       index: 0,
-      source: "",
-      sourceType: "",
+      source: {
+        src: "",
+        type: ""
+      },
       category: "Design",
       title: "The secret of our favorite places",
       href: "#",
@@ -47,19 +49,23 @@ const DATA = {
     },
     {
       index: 1,
-      source: "",
-      sourceType: "",
-      category: "Design",
-      title: "The secret of our favorite places",
+      source: {
+        src: "",
+        type: ""
+      },
+      category: "Innovation",
+      title: "4 futuristic cities and buildings that actually exist",
       href: "#",
       isWide: false
     },
     {
       index: 2,
-      source: "",
-      sourceType: "",
-      category: "Design",
-      title: "The secret of our favorite places",
+      source: {
+        src: "",
+        type: ""
+      },
+      category: "Advice",
+      title: "How to become an ideas machine",
       href: "#",
       isWide: false
     }
@@ -74,19 +80,35 @@ class App extends Component {
       )
     });
   }
-  // _renderPanelList(){
-  //   return DATA.panelData.map( (data) => {
-  //     let panelClassName = "panel"
+  _renderPanelList(){
+    return DATA.panelData.map( (data) => {
+      let panelClassName = "panel"
+      
+      if(data.isWide){
+        panelClassName = "panel panel-wide"
+      }
 
-  //     return <li className="nav-item" key="{data.index}">
-  //         <a href="{data.href}">{data.text}</a>
-  //       </li>;
-  //   });
-  // }
+      return <div className={panelClassName} key={data.index}>
+          <a href={data.href} className="panel-container">
+            <div className="panel-content">
+              <div className="title-container">
+                <h3 className="sub-title font-weight-300">{data.category}</h3>
+                <h1 className="title">{data.title}</h1>
+              </div>
+              <div className="btn-container">
+                <a href={data.href} className="btn btn-white">
+                  Read more
+                </a>
+              </div>
+            </div>
+          </a>
+        </div>;
+    });
+  }
 
   render() {
     const navList = this._renderNavList();
-    // const panelList = this._renderPanelList();
+    const panelList = this._renderPanelList();
     
     return <div className="container">
         <header className="menu">
@@ -94,50 +116,13 @@ class App extends Component {
             {navList}
           </ul>
         </header>
+        
         <div className="main">
-          <div className="panel panel-wide">
-            <div className="content">
-              <div className="title-container">
-                <h3 className="sub-title font-weight-300">Design</h3>
-                <h1 className="title">The Secret of our favorite</h1>
-                <h1 className="title">places</h1>
-              </div>
-              <div className="btn-container">
-                <a href="/" className="btn btn-white">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="panel">
-            <div className="content">
-              <div className="title-container">
-                <h3 className="sub-title font-weight-300">Design</h3>
-                <h1 className="title">The Secret of our favorite</h1>
-                <h1 className="title">places</h1>
-              </div>
-              <div className="btn-container">
-                <a href="/" className="btn btn-white">
-                  Read more
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="panel">
-            <div className="content">
-              <div className="title-container">
-                <h3 className="sub-title font-weight-300">Design</h3>
-                <h1 className="title">The Secret of our favorite</h1>
-                <h1 className="title">places</h1>
-              </div>
-              <div className="btn-container">
-                <a href="/" className="btn btn-white">
-                  Read more
-                </a>
-              </div>
-            </div>
+          <div className="panel-group">
+            {panelList}
           </div>
         </div>
+        
         <div className="link-container">
           <h3 className="text-normal font-weight-300">
             BMW in your country
