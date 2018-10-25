@@ -125,10 +125,8 @@ class App extends Component {
       return <div className={panelClassName} key={data.index}>
           <a href={data.href} className="panel-container">
             <div className="panel-content">
-              <div className="title-container">
                 <h3 className="sub-title font-weight-300">{data.category}</h3>
                 <h1 className="title">{data.title}</h1>
-              </div>
               <div className="btn-container">
                 <a href={data.href} className="btn btn-white">
                   Read more
@@ -151,10 +149,8 @@ class App extends Component {
       return <div className={panelClassName} key={data.index}>
           <a href={data.href} className="panel-container">
             <div className="panel-content">
-              <div className="title-container">
-                <h3 className="sub-title font-weight-300">{data.category}</h3>
-                <h1 className="title">{data.title}</h1>
-              </div>
+              <h3 className="sub-title font-weight-300">{data.category}</h3>
+              <h1 className="title">{data.title}</h1>
               <div className="btn-container">
                 <a href={data.href} className="btn btn-white">
                   Read more
@@ -176,7 +172,7 @@ class App extends Component {
           <nav className="container">
             <div className="logo">
               <a href="#">
-                <img className="logo-img" src = "https://www.bmw.com/etc/designs/bmwcom/base/img/logo-en.png"/>            
+                <img className="logo-img" src="https://www.bmw.com/etc/designs/bmwcom/base/img/logo-en.png" alt="logo-img"/>            
               </a>
             </div>
             <ul className="menu-list">
