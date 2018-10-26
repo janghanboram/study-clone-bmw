@@ -122,21 +122,25 @@ common button style
 .gallery-template{
   display: flex;
 }
-.gallery-item-group{
-  width: 33.33%;
-  height: 200px;
-}
-.gallery-item-group .gallery-item{
-  width: 100%;
+.gallery-template-1 .gallery-item-group{
+
 }
 .gallery-item{
   width: 33.33%;
-  height: 200px;
   background-color: salmon;
   border: solid 1px white;
-  display: flex;
+  flex: 1;
   align-items: flex-end;
+  padding-top: 15%;
 }
+.gallery-item-group {
+  width: 33.33%;
+}
+.gallery-item-group .gallery-item{
+  width: 100%;
+  padding-top: 40%;
+}
+
 .gallery-item .content{
   margin: 0 0 15px 35px;
   
@@ -144,7 +148,7 @@ common button style
 .gallery-item-large{
   width: 66.66%;
   background-color: rebeccapurple;
-  height: 400px;
+  padding-top: 30%;
 }
 
 .gallery-item .title, .gallery-item .sub-title {
@@ -155,10 +159,6 @@ common button style
   font-weight: bold  
 }
 
-.template-middle .gallery-item{
-  flex-grow: 1;
-  
-}
 .gallery .btn-container{
   text-align: center;
   margin: 45px 0;

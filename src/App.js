@@ -239,19 +239,22 @@ class App extends Component {
           </div>;
       })
     }else{
-      return items.map( (item, index) =>{
+      return items.map( (item, index) => {
         
         if(item.isWide === true){
           itemClassName += " gallery-item-large"
-          return <div className={itemClassName}>
+          return <div className={itemClassName} key={item.index}>
             <div className="content">
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
             </div>
           </div>;
         }else{
-          if(index === 0){
-            return <div className="gallery-item-group">
+          
+          if(index === 0 || index === 2){
+            let step = index === 0 ? 1 : -1;
+            
+            return <div className="gallery-item-group" key={item.index}>
               <div className="gallery-item">
                 <div className="content">
                   <p className="sub-title font-weight-300">{item.category}</p>
@@ -260,29 +263,12 @@ class App extends Component {
               </div>
               <div className="gallery-item">
                 <div className="content">
-                  <p className="sub-title font-weight-300">{items[index+1].category}</p>
-                  <p className="title">{items[index+1].title}</p>
+                  <p className="sub-title font-weight-300">{items[index+step].category}</p>
+                  <p className="title">{items[index+step].title}</p>
                 </div>
               </div>
             </div>
           }
-          if(index === 2){
-            return <div className="gallery-item-group">
-              <div className="gallery-item">
-                <div className="content">
-                  <p className="sub-title font-weight-300">{items[index-1].category}</p>
-                  <p className="title">{items[index-1].title}</p>
-                </div>
-              </div>
-              <div className="gallery-item">
-                <div className="content">
-                  <p className="sub-title font-weight-300">{item.category}</p>
-                  <p className="title">{item.title}</p>
-                </div>
-              </div>
-            </div>
-          }
-          return;
         }
       })
     }
@@ -304,8 +290,6 @@ class App extends Component {
     const navList = this._renderNavList();
     const panelList = this._renderPanelList();
     const galleryList = this._renderGalleryList();
-    console.log(galleryList)
-
     return (
       <div className="container">
         <header className="menu">
