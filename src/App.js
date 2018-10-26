@@ -188,6 +188,45 @@ const DATA = {
           isWide: true
         }
       ]
+    },
+    {
+      groupType: 2,      
+      groupId: 3,      
+      groupItems: [
+        {
+          index: 9,
+          source: {
+            src: "",
+            type: ""
+          },
+          category: "Lifestyle",
+          title: "Cape Cool - Cape Town and art",
+          href: "#",
+          isWide: false
+        },
+        {
+          index: 10,
+          source: {
+            src: "",
+            type: ""
+          },
+          category: "A Journey through Automobile History",
+          title: "The Seven Generations of the BMW 3 Series",
+          href: "#",
+          isWide: false
+        },
+        {
+          index: 11,
+          source: {
+            src: "",
+            type: ""
+          },
+          category: "Travel",
+          title: "How you can load your car properly",
+          href: "#",
+          isWide: false
+        }
+      ]
     }
   ]
 };
