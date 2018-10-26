@@ -270,42 +270,42 @@ class App extends Component {
     if(type === 2){
       return items.map( (item) =>{
         
-        return <div className={itemClassName}>
-            <div className="content">
+        return <a href="#" className={itemClassName}>
+            <div  className="content">
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
             </div>
-          </div>;
+          </a>;
       })
     }else{
       return items.map( (item, index) => {
         
         if(item.isWide === true){
           itemClassName += " gallery-item-large"
-          return <div className={itemClassName} key={item.index}>
+          return <a href="#" className={itemClassName} key={item.index}>
             <div className="content">
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
             </div>
-          </div>;
+          </a>;
         }else{
           
           if(index === 0 || index === 2){
             let step = index === 0 ? 1 : -1;
             
             return <div className="gallery-item-group" key={item.index}>
-              <div className="gallery-item">
+              <a href="#" className="gallery-item">
                 <div className="content">
                   <p className="sub-title font-weight-300">{item.category}</p>
                   <p className="title">{item.title}</p>
                 </div>
-              </div>
-              <div className="gallery-item">
+              </a>
+              <a href="#" className="gallery-item">
                 <div className="content">
                   <p className="sub-title font-weight-300">{items[index+step].category}</p>
                   <p className="title">{items[index+step].title}</p>
                 </div>
-              </div>
+              </a>
             </div>
           }
         }
@@ -350,7 +350,7 @@ class App extends Component {
           <div className="panel-group">{panelList}</div>
         </div>
 
-        <div className="link-container">
+        <div className="main-text-container">
           <h3 className="text-normal font-weight-300">BMW in your country</h3>
           <h1 className="text-large">ALL BMW MODELS</h1>
           <h3 className="text-normal">
@@ -366,6 +366,15 @@ class App extends Component {
             </a>
           </div>
         </div>
+
+      <div className="social">
+        <div className="main-text-container">
+          <h1 className="text-large">BMW ON THE SOCIAL WEB</h1>        
+          <h3 className="text-normal font-weight-300">Become part of the BMW community</h3>
+        </div>
+
+      </div>
+        
 
       </div>
     );

@@ -98,17 +98,17 @@ common button style
   height: 35%;
 }
 
-.link-container {
+.main-text-container {
   text-align: center;
   padding: 45px 0;
 }
 
-.text-large{
+.main-text-container  .text-large {
   line-height: 75px;
   font-size: 75px;
 }
 
-.text-normal{
+.main-text-container .text-normal {
   line-height: 45px;
   font-size: 30px;
 }
@@ -171,4 +171,7 @@ common button style
 }
 .btn-show-more{
   padding: 12px 125px;
+}
+.social{
+  background-color: #f8f8f8;
 }
