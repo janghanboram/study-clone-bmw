@@ -42,7 +42,7 @@ common button style
 .btn {
   font-weight:bold;
   border: solid 4px;
-  line-height: 52px;
+  line-height: 5;
   padding: 12px 40px;
 }
 .btn-white:hover{
@@ -90,12 +90,13 @@ common button style
 }
 .panel-content{
   position: absolute;
-  bottom: 30px;
-  padding: 30px 60px;
+  bottom: 6%;
+  left: 5%;
   display: flex;
   flex-direction: column;
-  justify-content: space-evenly;
-  height: 35%;
+}
+.panel-content .title, .panel-content .sub-title{
+  line-height: 1.5
 }
 
 .main-text-container {
