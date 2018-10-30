@@ -293,7 +293,7 @@ class App extends Component {
           gallerySource = <video src={item.source.src} autoPlay={true} />
         }
         
-        return <a href="#" className={itemClassName}>
+        return <a href="#" className={itemClassName} key={item.index}>
             <div  className="content">
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
