@@ -39,8 +39,8 @@ const DATA = {
     {
       index: 0,
       source: {
-        src: "",
-        type: ""
+        src: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Design/my-favorite-space/mfs-180919/mfs-00-teaser-hd.mp4",
+        type: "video"
       },
       category: "Design",
       title: "The secret of our favorite places",
@@ -50,8 +50,8 @@ const DATA = {
     {
       index: 1,
       source: {
-        src: "",
-        type: ""
+        src: "https://www.bmw.com/video//is/content/BMW/bmwcom/bmw_com/category/Design/G20_futuristische%20Städte/G20-Orte-sehen-du-musst-00-teaser-square.mp4",
+        type: "video"
       },
       category: "Innovation",
       title: "4 futuristic cities and buildings that actually exist",
@@ -79,8 +79,8 @@ const DATA = {
         {
           index: 0,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Automotive%20Life/google-street-view/streetview-00-teaser-hd.mp4",
+            type: "video"
           },
           category: "Mapping",
           title: "Everyone can measure the world",
@@ -90,8 +90,8 @@ const DATA = {
         {
           index: 1,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/frenkel-bmw-2002/frenkel-00-teaser-hd.jpg.asset.1536844919723.jpg",
+            type: "image"
           },
           category: "Vintage car",
           title: "BMW 2002: A golden treausure from the Orient",
@@ -101,8 +101,8 @@ const DATA = {
         {
           index: 2,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/osaka-city-guide/osaka-00-teaser-high.jpg.asset.1536078310827.jpg",
+            type: "image"
           },
           category: "Travel",
           title: "Food adventure Osaka: a city for gourmets",
@@ -118,8 +118,8 @@ const DATA = {
         {
           index: 3,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Design/pebble-beach/article-00-teaser-hd-v1.mp4",
+            type: "video"
           },
           category: "Classic Cars",
           title: "A visit to the world's most expensive beauty contest",
@@ -129,8 +129,8 @@ const DATA = {
         {
           index: 4,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Design/car-design/design-x5-00-teaser-hd-d.jpg.asset.1533653330621.jpg",
+            type: "image"
           },
           category: "Car design",
           title: "The car of the future in 7 steps",
@@ -140,8 +140,8 @@ const DATA = {
         {
           index: 5,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Automotive%20Life/need-for-speed/nfs-00-teaser-hd-d-v2.mp4",
+            type: "video"
           },
           category: "Gaming",
           title: "Need for Speed: Real adrenalin in a digital racing game",
@@ -157,8 +157,8 @@ const DATA = {
         {
           index: 6,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/mad-mods-lv/mad-mods-lv-00-teaser-hd.jpg.asset.1530687839955.jpg",
+            type: "image"
           },
           category: "Car Tuning",
           title: "BMW Mad Mods in Las Vegas",
@@ -168,8 +168,8 @@ const DATA = {
         {
           index: 7,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Design/sagmeister/sagmeister-00-teaser-hd.jpg?imwidth=768%20768w",
+            type: "image"
           },
           category: "Bold Voices",
           title: "Stefan Sagmeister: Designing happiness",
@@ -179,8 +179,8 @@ const DATA = {
         {
           index: 8,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/video/is/content/BMW/bmwcom/bmw_com/category/Automotive%20Life/south-carolina-landscape/bmw-x5-roadtrip-sc-00-teaser-hd.mp4",
+            type: "video"
           },
           category: "Travel",
           title: "Oh Carolina! A road trip through the breakthaking South Carolina",
@@ -196,8 +196,8 @@ const DATA = {
         {
           index: 9,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Design/cape-cool/capecool-00-teaser-hd-d.jpg.asset.1529660998911.jpg",
+            type: "image"
           },
           category: "Lifestyle",
           title: "Cape Cool - Cape Town and art",
@@ -207,8 +207,8 @@ const DATA = {
         {
           index: 10,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/3er-bmw/181010_3er/3er-00-teaser-hd.jpg.asset.1539275376590.jpg",
+            type: "image"
           },
           category: "A Journey through Automobile History",
           title: "The Seven Generations of the BMW 3 Series",
@@ -218,8 +218,8 @@ const DATA = {
         {
           index: 11,
           source: {
-            src: "",
-            type: ""
+            src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/automotive-life/aftersales-holidayprep/holiday-preparations-00-teaser-hd.jpg.asset.1527519344541.jpg",
+            type: "image"
           },
           category: "Travel",
           title: "How you can load your car properly",
@@ -281,16 +281,41 @@ class App extends Component {
     let itemClassName = "gallery-item"
     if(type === 2){
       return items.map( (item) =>{
+
+        let gallerySource = "";
+
+
+        if(item.source.type === "image") {
+          gallerySource = <img src={item.source.src} alt="" />
+        }
+
+        if(item.source.type === "video") {
+          gallerySource = <video src={item.source.src} autoPlay={true} />
+        }
         
         return <a href="#" className={itemClassName}>
             <div  className="content">
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
             </div>
+            <div className="gallery-source">
+              {gallerySource}
+            </div>
           </a>;
       })
     }else{
       return items.map( (item, index) => {
+
+        let gallerySource = "";
+
+
+        if(item.source.type === "image") {
+          gallerySource = <img src={item.source.src} alt="" />
+        }
+
+        if(item.source.type === "video") {
+          gallerySource = <video src={item.source.src} autoPlay={true} />
+        }
         
         if(item.isWide === true){
           itemClassName += " gallery-item-large"
@@ -299,23 +324,42 @@ class App extends Component {
               <p className="sub-title font-weight-300">{item.category}</p>
               <p className="title">{item.title}</p>
             </div>
+            <div className="gallery-source">
+              {gallerySource}
+            </div>
           </a>;
         }else{
           
           if(index === 0 || index === 2){
             let step = index === 0 ? 1 : -1;
             
+            let gallerySource2 = "";
+
+            if (items[index + step].source.type === "image") {
+              gallerySource2 = <img src={items[index+step].source.src} alt="" />
+            }
+
+            if (items[index + step].source.type === "video") {
+              gallerySource2 = <video src={items[index+step].source.src} autoPlay={true} />
+            }
+
             return <div className="gallery-item-group" key={item.index}>
               <a href="#" className="gallery-item">
                 <div className="content">
                   <p className="sub-title font-weight-300">{item.category}</p>
                   <p className="title">{item.title}</p>
                 </div>
+                <div className="gallery-source">
+                  {gallerySource}
+                </div>
               </a>
               <a href="#" className="gallery-item">
                 <div className="content">
                   <p className="sub-title font-weight-300">{items[index+step].category}</p>
                   <p className="title">{items[index+step].title}</p>
+                </div>
+                <div className="gallery-source">
+                  {gallerySource2}
                 </div>
               </a>
             </div>

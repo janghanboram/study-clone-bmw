@@ -71,9 +71,9 @@ common button style
   flex-wrap: wrap;
 }
 .panel {
+  overflow: hidden;
   position: relative;
   flex: 1;
-  /* background-color: salmon; */
   margin: 1px;
   /* padding-top을 %로 처리하면 브라우저를 resize할 때, height가 비용만큼 변함. */
   padding-top: 40%;
@@ -88,22 +88,26 @@ common button style
   bottom: 0;
   left: 0;  
 }
-
+.panel-container:hover .panel-source{
+  transform: scale(1.1);
+}
+.panel-source{
+  transform: scale(1);
+  transition: 12s cubic-bezier(0.23, 1, 0.32, 1);
+}
 .panel-content{
   position: absolute;
   bottom: 0;
   left: 0;
   right: 0;
-  padding: 15px;
-  /* bottom: 6%;
-  left: 5%;
+  padding: 30px;
   display: flex;
-  flex-direction: column; */
+  flex-direction: column;
 }
 .panel-content .title, .panel-content .sub-title{
   line-height: 1.5
 }
-.panel-source{
+.panel-source, .gallery-source{
   position: absolute;
   left: 0;
   right: 0;
@@ -114,7 +118,9 @@ common button style
 }
 
 .panel-source img,
-.panel-source video {
+.panel-source video,
+.gallery-source img,
+.gallery-source video {
   position: absolute;
   left: 50%;
   top: 50%;
@@ -151,7 +157,6 @@ common button style
   display: flex;
 }
 .gallery-item{
-  background-color: salmon;
   border: solid 1px white;
   flex: 1;
   align-items: flex-end;
@@ -180,7 +185,6 @@ common button style
 }
 .gallery-item-large{
   flex:2;
-  background-color: rebeccapurple;
   padding-top: 30%;
 }
 
