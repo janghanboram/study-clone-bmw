@@ -88,10 +88,13 @@ common button style
   bottom: 0;
   left: 0;  
 }
-.panel-container:hover .panel-source{
+.panel-container:hover .panel-source,
+.gallery-item:hover .gallery-source
+{
   transform: scale(1.1);
 }
-.panel-source{
+.panel-source,
+.gallery-source{
   transform: scale(1);
   transition: 12s cubic-bezier(0.23, 1, 0.32, 1);
 }
@@ -157,7 +160,9 @@ common button style
   display: flex;
 }
 .gallery-item{
-  border: solid 1px white;
+  /* border: solid 1px white; */
+  margin: 1px;
+  overflow: hidden;
   flex: 1;
   align-items: flex-end;
   padding-top: 15%;
