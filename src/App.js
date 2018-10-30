@@ -61,8 +61,8 @@ const DATA = {
     {
       index: 2,
       source: {
-        src: "",
-        type: ""
+        src: "https://www.bmw.com/content/dam/bmw/marketBMWCOM/bmw_com/categories/Innovation/adam-grant/ag-00-teaser-square.jpg?imwidth=1024",
+        type: "image"
       },
       category: "Advice",
       title: "How to become an ideas machine",
@@ -243,22 +243,34 @@ class App extends Component {
   _renderPanelList() {
     return DATA.panelData.map(data => {
       let panelClassName = "panel";
+      let panelSource = "";
 
       if (data.isWide) {
         panelClassName = "panel panel-wide";
+      }
+
+      if(data.source.type === "image") {
+        panelSource = <img src={data.source.src} alt="" />
+      }
+
+      if(data.source.type === "video") {
+        panelSource = <video src={data.source.src} autoPlay={true} />
       }
 
       return (
         <div className={panelClassName} key={data.index}>
           <a href={data.href} className="panel-container">
             <div className="panel-content">
-              <h3 className="sub-title font-weight-300">{data.category}</h3>
-              <h1 className="title">{data.title}</h1>
+              <h3 className="sub-title font-white font-weight-300">{data.category}</h3>
+              <h1 className="title font-white">{data.title}</h1>
               <div className="btn-container">
                 <span href={data.href} className="btn btn-white">
                   Read more
                 </span>
               </div>
+            </div>
+            <div className="panel-source">
+              { panelSource }
             </div>
           </a>
         </div>
@@ -325,6 +337,7 @@ class App extends Component {
       
     })      
   }
+  
   render() {
     const navList = this._renderNavList();
     const panelList = this._renderPanelList();
@@ -372,7 +385,6 @@ class App extends Component {
           <h1 className="text-large">BMW ON THE SOCIAL WEB</h1>        
           <h3 className="text-normal font-weight-300">Become part of the BMW community</h3>
         </div>
-
       </div>
         
 
